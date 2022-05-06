@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Chat Box</title>
-    <link rel="stylesheet" type="text/css" href="style.css" media=”screen” />
   </head>
   <body>
     <h3>Enter Chat and press enter:</h3>
 <div>
-    <input id="username" placeholder="username" /><br>
-    <input id=input placeholder="message" maxlength="20" />
+    <input type="text" placeholder="username" name="title" size="20" />
+    <input id=input placeholder="message" maxlength="100"/>
   </div>
+ 
 
 <h3>Chat Output:</h3>
 <div id=box></div>
@@ -26,6 +26,7 @@
         function $(id) {
             return document.getElementById(id);
         }
+        var uname = document.getElementsById("title")[0].value;
         var box = $('box'),
             input = $('input'),
             channel = '10chat-demo';
@@ -48,5 +49,6 @@
         });
     })();
 </script>
+
   </body>
 </html>
